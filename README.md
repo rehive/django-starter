@@ -13,7 +13,9 @@ If psycopg2 installation fails to install, try `conda install psycopg2==2.6.2`
 `pip install invoke python-dotenv fabric3 pyyaml semver`  
 
 
-3. Add the project name and details to as well as the virtual environment path to `local.yaml` and use `.local.env.example` as a template to create a `.local.env` with the project environmental variables.
+3. Add the project name and details to as well as the virtual environment path to `local.yaml.` For Anaconda, if you don't know the path to your virtual environment, you can run `which conda` to find your anaconda path.
+
+4. Use `.local.env.example` as a template to create a `.local.env` with the project environmental variables.
 
 3. Start the postgres database:  
 `inv local.compose -c 'up -d postgres'`
