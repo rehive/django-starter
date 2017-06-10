@@ -1,0 +1,15 @@
+apiVersion: v1
+metadata:
+  name: bitcoin-hooks
+  namespace: bitcoin-hooks-staging
+data:
+  DEBUG: "True"
+  NAMESPACE: "staging"
+  PROJECT_NAME: "bitcoin-hooks"
+  CELERY_ID: "bitcoin-kube-staging"
+  TASK_QUEUE: "True"
+  GCLOUD_USE_STATIC: "True"
+  GCLOUD_STATIC_BUCKET: "bitcoin-hooks-static-staging"
+  AWS_USE_S3: "True"
+  AWS_STORAGE_BUCKET_NAME: "rehive"
+kind: ConfigMap

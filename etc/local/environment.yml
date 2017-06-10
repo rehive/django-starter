@@ -1,0 +1,6 @@
+name: bitcoin-hooks
+dependencies:
+- python=3.5
+- django
+- psycopg2
+- pip

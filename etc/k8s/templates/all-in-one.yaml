@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ${NAMESPACE}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${PROJECT_NAME}
+  namespace: ${NAMESPACE}
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+  type: NodePort
+  selector:
+    app: ${PROJECT_NAME}
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ${PROJECT_NAME}
+  namespace: ${NAMESPACE}
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ${PROJECT_NAME}
+    spec:
+      containers:
+      - image: ${IMAGE}
+        imagePullPolicy: Always
+        name: ${PROJECT_NAME}
+        ports:
+        - containerPort: 80
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ${PROJECT_NAME}
+  namespace: ${NAMESPACE}
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "gce"
+spec:
+  tls:
+  - hosts:
+    - ${VIRTUAL_HOST}
+    secretName: ${PROJECT_NAME}-tls
+  rules:
+  - host: ${VIRTUAL_HOST}
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: ${PROJECT_NAME}
+          servicePort: 80  

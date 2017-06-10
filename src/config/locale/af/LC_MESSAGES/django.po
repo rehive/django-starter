@@ -1,0 +1,1023 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-13 11:16+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/config/plugins/data/countries.py:5
+msgid "Afghanistan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:6
+msgid "Åland Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:7
+msgid "Albania"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:8
+msgid "Algeria"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:9
+msgid "American Samoa"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:10
+msgid "Andorra"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:11
+msgid "Angola"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:12
+msgid "Anguilla"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:13
+msgid "Antarctica"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:14
+msgid "Antigua and Barbuda"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:15
+msgid "Argentina"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:16
+msgid "Armenia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:17
+msgid "Aruba"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:18
+msgid "Australia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:19
+msgid "Austria"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:20
+msgid "Azerbaijan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:21
+msgid "Bahamas"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:22
+msgid "Bahrain"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:23
+msgid "Bangladesh"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:24
+msgid "Barbados"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:25
+msgid "Belarus"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:26
+msgid "Belgium"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:27
+msgid "Belize"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:28
+msgid "Benin"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:29
+msgid "Bermuda"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:30
+msgid "Bhutan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:31
+msgid "Bolivia (Plurinational State of)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:32
+msgid "Bonaire, Sint Eustatius and Saba"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:33
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:34
+msgid "Botswana"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:35
+msgid "Bouvet Island"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:36
+msgid "Brazil"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:37
+msgid "British Indian Ocean Territory"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:38
+msgid "Brunei Darussalam"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:39
+msgid "Bulgaria"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:40
+msgid "Burkina Faso"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:41
+msgid "Burundi"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:42
+msgid "Cabo Verde"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:43
+msgid "Cambodia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:44
+msgid "Cameroon"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:45
+msgid "Canada"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:46
+msgid "Cayman Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:47
+msgid "Central African Republic"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:48
+msgid "Chad"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:49
+msgid "Chile"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:50
+msgid "China"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:51
+msgid "Christmas Island"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:52
+msgid "Cocos (Keeling) Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:53
+msgid "Colombia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:54
+msgid "Comoros"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:55
+msgid "Congo (the Democratic Republic of the)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:56
+msgid "Congo"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:57
+msgid "Cook Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:58
+msgid "Costa Rica"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:59
+msgid "Côte d'Ivoire"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:60
+msgid "Croatia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:61
+msgid "Cuba"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:62
+msgid "Curaçao"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:63
+msgid "Cyprus"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:64
+msgid "Czech Republic"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:65
+msgid "Denmark"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:66
+msgid "Djibouti"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:67
+msgid "Dominica"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:68
+msgid "Dominican Republic"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:69
+msgid "Ecuador"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:70
+msgid "Egypt"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:71
+msgid "El Salvador"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:72
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:73
+msgid "Eritrea"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:74
+msgid "Estonia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:75
+msgid "Ethiopia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:76
+msgid "Falkland Islands  [Malvinas]"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:77
+msgid "Faroe Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:78
+msgid "Fiji"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:79
+msgid "Finland"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:80
+msgid "France"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:81
+msgid "French Guiana"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:82
+msgid "French Polynesia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:83
+msgid "French Southern Territories"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:84
+msgid "Gabon"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:85
+msgid "Gambia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:86
+msgid "Georgia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:87
+msgid "Germany"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:88
+msgid "Ghana"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:89
+msgid "Gibraltar"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:90
+msgid "Greece"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:91
+msgid "Greenland"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:92
+msgid "Grenada"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:93
+msgid "Guadeloupe"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:94
+msgid "Guam"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:95
+msgid "Guatemala"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:96
+msgid "Guernsey"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:97
+msgid "Guinea"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:98
+msgid "Guinea-Bissau"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:99
+msgid "Guyana"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:100
+msgid "Haiti"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:101
+msgid "Heard Island and McDonald Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:102
+msgid "Holy See"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:103
+msgid "Honduras"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:104
+msgid "Hong Kong"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:105
+msgid "Hungary"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:106
+msgid "Iceland"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:107
+msgid "India"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:108
+msgid "Indonesia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:109
+msgid "Iran (Islamic Republic of)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:110
+msgid "Iraq"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:111
+msgid "Ireland"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:112
+msgid "Isle of Man"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:113
+msgid "Israel"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:114
+msgid "Italy"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:115
+msgid "Jamaica"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:116
+msgid "Japan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:117
+msgid "Jersey"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:118
+msgid "Jordan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:119
+msgid "Kazakhstan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:120
+msgid "Kenya"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:121
+msgid "Kiribati"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:122
+msgid "Korea (the Democratic People's Republic of)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:123
+msgid "Korea (the Republic of)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:124
+msgid "Kuwait"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:125
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:126
+msgid "Lao People's Democratic Republic"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:127
+msgid "Latvia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:128
+msgid "Lebanon"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:129
+msgid "Lesotho"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:130
+msgid "Liberia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:131
+msgid "Libya"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:132
+msgid "Liechtenstein"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:133
+msgid "Lithuania"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:134
+msgid "Luxembourg"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:135
+msgid "Macao"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:136
+msgid "Macedonia (the former Yugoslav Republic of)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:137
+msgid "Madagascar"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:138
+msgid "Malawi"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:139
+msgid "Malaysia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:140
+msgid "Maldives"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:141
+msgid "Mali"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:142
+msgid "Malta"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:143
+msgid "Marshall Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:144
+msgid "Martinique"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:145
+msgid "Mauritania"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:146
+msgid "Mauritius"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:147
+msgid "Mayotte"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:148
+msgid "Mexico"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:149
+msgid "Micronesia (Federated States of)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:150
+msgid "Moldova (the Republic of)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:151
+msgid "Monaco"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:152
+msgid "Mongolia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:153
+msgid "Montenegro"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:154
+msgid "Montserrat"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:155
+msgid "Morocco"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:156
+msgid "Mozambique"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:157
+msgid "Myanmar"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:158
+msgid "Namibia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:159
+msgid "Nauru"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:160
+msgid "Nepal"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:161
+msgid "Netherlands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:162
+msgid "New Caledonia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:163
+msgid "New Zealand"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:164
+msgid "Nicaragua"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:165
+msgid "Niger"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:166
+msgid "Nigeria"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:167
+msgid "Niue"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:168
+msgid "Norfolk Island"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:169
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:170
+msgid "Norway"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:171
+msgid "Oman"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:172
+msgid "Pakistan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:173
+msgid "Palau"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:174
+msgid "Palestine, State of"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:175
+msgid "Panama"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:176
+msgid "Papua New Guinea"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:177
+msgid "Paraguay"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:178
+msgid "Peru"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:179
+msgid "Philippines"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:180
+msgid "Pitcairn"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:181
+msgid "Poland"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:182
+msgid "Portugal"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:183
+msgid "Puerto Rico"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:184
+msgid "Qatar"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:185
+msgid "Réunion"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:186
+msgid "Romania"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:187
+msgid "Russian Federation"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:188
+msgid "Rwanda"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:189
+msgid "Saint Barthélemy"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:190
+msgid "Saint Helena, Ascension and Tristan da Cunha"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:191
+msgid "Saint Kitts and Nevis"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:192
+msgid "Saint Lucia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:193
+msgid "Saint Martin (French part)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:194
+msgid "Saint Pierre and Miquelon"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:195
+msgid "Saint Vincent and the Grenadines"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:196
+msgid "Samoa"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:197
+msgid "San Marino"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:198
+msgid "Sao Tome and Principe"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:199
+msgid "Saudi Arabia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:200
+msgid "Senegal"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:201
+msgid "Serbia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:202
+msgid "Seychelles"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:203
+msgid "Sierra Leone"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:204
+msgid "Singapore"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:205
+msgid "Sint Maarten (Dutch part)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:206
+msgid "Slovakia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:207
+msgid "Slovenia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:208
+msgid "Solomon Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:209
+msgid "Somalia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:210
+msgid "South Africa"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:211
+msgid "South Georgia and the South Sandwich Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:212
+msgid "South Sudan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:213
+msgid "Spain"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:214
+msgid "Sri Lanka"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:215
+msgid "Sudan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:216
+msgid "Suriname"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:217
+msgid "Svalbard and Jan Mayen"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:218
+msgid "Swaziland"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:219
+msgid "Sweden"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:220
+msgid "Switzerland"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:221
+msgid "Syrian Arab Republic"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:222
+msgid "Taiwan (Province of China)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:223
+msgid "Tajikistan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:224
+msgid "Tanzania, United Republic of"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:225
+msgid "Thailand"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:226
+msgid "Timor-Leste"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:227
+msgid "Togo"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:228
+msgid "Tokelau"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:229
+msgid "Tonga"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:230
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:231
+msgid "Tunisia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:232
+msgid "Turkey"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:233
+msgid "Turkmenistan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:234
+msgid "Turks and Caicos Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:235
+msgid "Tuvalu"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:236
+msgid "Uganda"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:237
+msgid "Ukraine"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:238
+msgid "United Arab Emirates"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:239
+msgid "United Kingdom of Great Britain and Northern Ireland"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:240
+msgid "United States Minor Outlying Islands"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:241
+msgid "United States of America"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:242
+msgid "Uruguay"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:243
+msgid "Uzbekistan"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:244
+msgid "Vanuatu"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:245
+msgid "Venezuela (Bolivarian Republic of)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:246
+msgid "Viet Nam"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:247
+msgid "Virgin Islands (British)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:248
+msgid "Virgin Islands (U.S.)"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:249
+msgid "Wallis and Futuna"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:250
+msgid "Western Sahara"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:251
+msgid "Yemen"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:252
+msgid "Zambia"
+msgstr ""
+
+#: src/config/plugins/data/countries.py:253
+msgid "Zimbabwe"
+msgstr ""
+
+#: src/config/settings.py:132
+msgid "English"
+msgstr ""
+
+#: src/config/settings.py:133
+msgid "Afrikaans"
+msgstr ""

@@ -1,0 +1,7 @@
+PROJECT_NAME: bitcoin-hooks
+NAMESPACE: bitcoin-hooks-staging
+IMAGE: gcr.io/zapgo-1273/bitcoin-hooks
+BASE_IMAGE: rehive/bitcoin-hooks-base
+VIRTUAL_HOST: staging.bitcoinhooks.rehive.com
+ENV_FILE: .production.env
+CELERY_ID: bitcoin-kube-staging

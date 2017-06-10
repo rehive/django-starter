@@ -1,0 +1,6 @@
+{
+    "worker-scheduled-processing":"scheduled-processing",
+    "worker-notify-new-txs":"notify-new-txs",
+    "worker-notify-confirmations":"notify-confirmations",
+    "worker-send-webhooks":"send-webhooks"
+}

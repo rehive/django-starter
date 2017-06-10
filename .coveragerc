@@ -1,0 +1,7 @@
+[run]
+source = src/
+omit =
+    tests.py
+    tests/*
+    */tests/*.py
+    */migrations/*.py

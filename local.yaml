@@ -1,0 +1,9 @@
+PROJECT_NAME: bitcoin-hooks
+NAMESPACE: bitcoin-hooks
+BASE_IMAGE: rehive/bitcoin-hooks-base
+IMAGE: gcr.io/zapgo-1273/bitcoin-hooks
+CELERY_ID: bitcoin-kube-local
+VIRTUAL_HOST: bitcoinhooks.rehive.com
+VENV_PYTHON: ~/anaconda/envs/zapgo-core/bin/python3.5
+ENV_FILE: .local.env
+POSTGRES_1_PORT_5432_TCP_PORT: 5123

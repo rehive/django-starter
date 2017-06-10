@@ -1,0 +1,8 @@
+PROJECT_NAME: bitcoin-hooks
+NAMESPACE: bitcoin-hooks
+IMAGE: gcr.io/zapgo-1273/bitcoin-hooks
+BASE_IMAGE: rehive/bitcoin-hooks-base
+VIRTUAL_HOST: bitcoinhooks.rehive.com
+CELERY_ID: bitcoin-kube
+ENV_FILE: .production.env
+VENV_PYTHON: ~/anaconda/envs/zapgo-core/bin/python3.5

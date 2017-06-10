@@ -1,0 +1,42 @@
+version: "2.1"
+
+services:
+  webapp:
+    extends:
+      service: webapp
+      file: ./docker-services.yml
+    command: bash -c "gunicorn config.wsgi:application --config file:config/gunicorn.py"
+    links:
+      - postgres
+    ports:
+      - 8010:8000
+
+  worker:
+    extends:
+        service: webapp
+        file: ./docker-services.yml
+    command: bash -c "celery -A config.celery worker --loglevel=INFO --concurrency=4 -Q general-${CELERY_ID}"
+    links:
+      - postgres
+
+  scheduler:
+    extends:
+      service: webapp
+      file: ./docker-services.yml
+    command: bash -c "celery -A config.celery worker --beat --loglevel=INFO --pidfile= --concurrency=1 -Q dummy-queue-{CELERY_ID}"
+
+  postgres:
+    image: postgres:9.5
+    volumes_from:
+      - db_data
+    ports:
+      - '${POSTGRES_1_PORT_5432_TCP_PORT}:5432'
+    env_file:
+    - ${PWD}/${ENV_FILE}
+    restart: always
+
+  db_data:
+    image: postgres
+    command: echo "DB data volume!"
+    volumes:
+      - /var/lib/postgresql/data
