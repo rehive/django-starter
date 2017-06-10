@@ -57,7 +57,7 @@ target/
 
 # Environment file
 .env
-*.env*
+*.env
 *.secret.yaml
 
 etc/certs

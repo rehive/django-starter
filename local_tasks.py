@@ -26,7 +26,7 @@ def get_config(config):
 @task
 def compose(ctx, cmd='--help'):
     """
-    Wrapper for docker-compose
+    Local only function: Wrapper for docker-compose
     """
     config_dict = get_config('local')
     image_name = config_dict['IMAGE'].split(':')[0]
@@ -36,14 +36,16 @@ def compose(ctx, cmd='--help'):
                 "CELERY_ID={celery_id}  "
                 "COMPOSE_PROJECT_NAME={compose_project_name} "
                 "POSTGRES_1_PORT_5432_TCP_PORT={postgres_port} "
-               ).format(image_name=image_name,
-                        env_file=config_dict['ENV_FILE'],
-                        celery_id=config_dict['CELERY_ID'],
-                        compose_project_name=config_dict['PROJECT_NAME'],
-                        postgres_port=config_dict['POSTGRES_1_PORT_5432_TCP_PORT'])
+                ).format(image_name=image_name,
+                         env_file=config_dict['ENV_FILE'],
+                         celery_id=config_dict['CELERY_ID'],
+                         compose_project_name=config_dict['PROJECT_NAME'],
+                         postgres_port=config_dict['POSTGRES_1_PORT_5432_TCP_PORT'])
 
+    path = 'etc/local/docker-compose.yml'
 
-    ctx.run('{env} docker-compose {cmd}'.format(env=env_vars, cmd=cmd))
+    ctx.run(
+        '{env} docker-compose -f {path} {cmd}'.format(env=env_vars, cmd=cmd, path=path))
 
 @task
 def manage(ctx, cmd):
