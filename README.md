@@ -3,7 +3,7 @@ Django starter project
 Local development
 -----------------
 1. Set up a python virtual environment. E.g. with Anaconda:
-`conda create -n django-starter`  
+`conda create -n django-starter python=3`  
 `source activate django-starter`  
 `pip install -r requirements.txt`
 
