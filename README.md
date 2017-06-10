@@ -10,11 +10,8 @@ Local development
 If psycopg2 installation fails to install, try `conda install psycopg2==2.6.2`
 
 2. Install `invoke` and related libraries in your virtual environment (you can do this in a separate environment if you prefer):  
-`pip install invoke`  
-`pip install python-dotenv`  
-`pip install fabric3`  
-`pip install pyyaml`  
-`pip install semver`  
+`pip install invoke python-dotenv fabric3 pyyaml semver`  
+
 
 3. Add the project name and details to as well as the virtual environment path to local.yaml and use `.local.env.example` as a template to create a `.local.env` with the project environmental variables.
 
