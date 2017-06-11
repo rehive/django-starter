@@ -5,7 +5,7 @@ services:
     extends:
       service: webapp
       file: ./docker-services.yml
-    command: bash -c "gunicorn config.wsgi:application --config file:config/gunicorn.py"
+    command: /bin/sh -c "gunicorn config.wsgi:application --config file:config/gunicorn.py"
     links:
       - postgres
     ports:
@@ -15,7 +15,7 @@ services:
     extends:
         service: webapp
         file: ./docker-services.yml
-    command: bash -c "celery -A config.celery worker --loglevel=INFO --concurrency=4 -Q general-${CELERY_ID}"
+    command: /bin/sh -c "celery -A config.celery worker --loglevel=INFO --concurrency=4 -Q general-${CELERY_ID}"
     links:
       - postgres
 
@@ -23,16 +23,16 @@ services:
     extends:
       service: webapp
       file: ./docker-services.yml
-    command: bash -c "celery -A config.celery worker --beat --loglevel=INFO --pidfile= --concurrency=1 -Q dummy-queue-{CELERY_ID}"
+    command: /bin/sh -c "celery -A config.celery worker --beat --loglevel=INFO --pidfile= --concurrency=1 -Q dummy-queue-{CELERY_ID}"
 
   postgres:
     image: postgres:9.5
     volumes_from:
       - db_data
     ports:
-      - '${POSTGRES_1_PORT_5432_TCP_PORT}:5432'
+      - '${POSTGRES_PORT}:5432'
     env_file:
-    - ${PWD}/${ENV_FILE}
+    - ${ENV_FILE}
     restart: always
 
   db_data:

@@ -83,12 +83,8 @@ def build(ctx, config, version_tag, packages=False):
     """
     Build project's docker image on remote server using fabric
     """
-    execute(fab.set_env)
+    execute(fab.set_env, config)
     execute(fab.upload)
-    if packages:
-        execute(fab.wheels)
-        execute(fab.build_base)
-        execute(fab.push_base)
     execute(fab.build, config, version_tag)
     execute(fab.push, config, version_tag)
 

@@ -10,31 +10,22 @@ from fabric.contrib.project import rsync_project
 import posixpath
 
 
-def set_env():
+def set_env(config):
     """
     Fabric environmental variable setup
     """
-    env.local_dotenv_path = os.path.join(
-        os.path.dirname(__file__), 'etc/base_image/.env')
-    dotenv.load_dotenv(env.local_dotenv_path)
-    env.project_name = os.environ.get('PROJECT_NAME', '')
+    # Bug: when setting this inside a function. Using host_string as workaround
+    config_dict = get_config(config)
+    env.hosts = [config_dict['HOST_NAME'], ]
+    env.host_string = config_dict['HOST_NAME']
+
+    env.project_name = config_dict['PROJECT_NAME']
     env.project_dir = posixpath.join('/srv/images/', env.project_name)
     env.use_ssh_config = True
-
-    # Bug: when setting this inside a function. Using host_string as workaround
-    env.hosts = [os.environ.get('HOST_NAME', ''), ]
-    env.host_string = os.environ.get('HOST_NAME', '')
 
     env.base_image_name = os.environ.get('BASE_IMAGE_NAME', '')
     env.build_dir = '/srv/build'
     env.local_path = os.path.dirname(__file__)
-
-
-def B():
-    """
-    Shortcut to set build server environment
-    """
-    set_env()
 
 
 def format_yaml(template, config):
@@ -50,16 +41,21 @@ def get_config(config):
     if config[-5:] != '.yaml':
         config += '.yaml'
 
-    file_buffer = BytesIO()
-    with cd(env.project_dir):
-        get(config, file_buffer)
-    config_dict = yaml.load(file_buffer.getvalue())
+    # Use /server as base path
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    server_dir_path = dir_path
+    if not os.path.isabs(config):
+        config = os.path.join(server_dir_path, config)
+
+    with open(config, 'r') as stream:
+        config_dict = yaml.load(stream)
 
     return config_dict
 
 
 def upload():
     """Upload entire project to build server"""
+    # Bug: when setting this inside a function. Using host_string as workaround
     run('mkdir -p /srv/images/'+env.project_name+'/')
     rsync_project(
         env.project_dir, './',
@@ -76,7 +72,6 @@ def docker(cmd='--help'):
     """
     Wrapper for docker
     """
-    set_env()
     template = 'docker {cmd}'.format(cmd=cmd)
     run(template)
 
@@ -85,7 +80,6 @@ def compose(cmd='--help', path=''):
     """
     Wrapper for docker-compose
     """
-    set_env()
     with cd(path):
         run('docker-compose {cmd}'.format(cmd=cmd))
 
@@ -108,8 +102,7 @@ def build(config, version_tag):
     image = '{}:{}'.format(image_name, version_tag)
     base_image = config_dict['BASE_IMAGE']
 
-    cmd = 'docker build -t {image} --build-arg base_image={base_image} .'.format(image=image,
-                                                                                 base_image=base_image)
+    cmd = 'docker build -t {image} .'.format(image=image)
     with cd(env.project_dir):
         run(cmd)
     return image

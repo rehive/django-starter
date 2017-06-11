@@ -11,12 +11,12 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: gcr.io/zapgo-1273/bitcoin-hooks:v0.022
+      - image: zapgo/bitcoin-hooks:0.002
         imagePullPolicy: IfNotPresent
         name: bitcoin-hooks
         ports:
         - containerPort: 8000
-        command: ['bash','-c', 'celery -A config.celery worker --loglevel=INFO --concurrency=1 -Q scheduled-processing-bitcoin-kube-staging']
+        command: ['/bin/sh','-c', 'celery -A config.celery worker --loglevel=INFO --concurrency=1 -Q scheduled-processing-bitcoin-kube-staging']
         envFrom:
           - secretRef:
               name: bitcoin-hooks
@@ -36,12 +36,12 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: gcr.io/zapgo-1273/bitcoin-hooks:v0.022
+      - image: zapgo/bitcoin-hooks:0.002
         imagePullPolicy: IfNotPresent
         name: bitcoin-hooks
         ports:
         - containerPort: 8000
-        command: ['bash','-c', 'celery -A config.celery worker --loglevel=INFO --concurrency=1 -Q notify-new-txs-bitcoin-kube-staging']
+        command: ['/bin/sh','-c', 'celery -A config.celery worker --loglevel=INFO --concurrency=1 -Q notify-new-txs-bitcoin-kube-staging']
         envFrom:
           - secretRef:
               name: bitcoin-hooks
@@ -61,12 +61,12 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: gcr.io/zapgo-1273/bitcoin-hooks:v0.022
+      - image: zapgo/bitcoin-hooks:0.002
         imagePullPolicy: IfNotPresent
         name: bitcoin-hooks
         ports:
         - containerPort: 8000
-        command: ['bash','-c', 'celery -A config.celery worker --loglevel=INFO --concurrency=1 -Q notify-confirmations-bitcoin-kube-staging']
+        command: ['/bin/sh','-c', 'celery -A config.celery worker --loglevel=INFO --concurrency=1 -Q notify-confirmations-bitcoin-kube-staging']
         envFrom:
           - secretRef:
               name: bitcoin-hooks
@@ -86,12 +86,12 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: gcr.io/zapgo-1273/bitcoin-hooks:v0.022
+      - image: zapgo/bitcoin-hooks:0.002
         imagePullPolicy: IfNotPresent
         name: bitcoin-hooks
         ports:
         - containerPort: 8000
-        command: ['bash','-c', 'celery -A config.celery worker --loglevel=INFO --concurrency=1 -Q send-webhooks-bitcoin-kube-staging']
+        command: ['/bin/sh','-c', 'celery -A config.celery worker --loglevel=INFO --concurrency=1 -Q send-webhooks-bitcoin-kube-staging']
         envFrom:
           - secretRef:
               name: bitcoin-hooks

@@ -30,12 +30,12 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: gcr.io/zapgo-1273/bitcoin-hooks:v0.022
+      - image: zapgo/bitcoin-hooks:0.002
         imagePullPolicy: IfNotPresent
         name: bitcoin-hooks
         ports:
         - containerPort: 8000
-        command: ['bash','-c', 'gunicorn config.wsgi:application --config file:config/gunicorn.py']
+        command: ['/bin/sh','-c', 'gunicorn config.wsgi:application --config file:config/gunicorn.py']
         envFrom:
           - secretRef:
               name: bitcoin-hooks

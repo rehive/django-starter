@@ -1,7 +1,7 @@
 PROJECT_NAME: bitcoin-hooks
+HOST_NAME: build-server # not required for k8s-only setup
 NAMESPACE: bitcoin-hooks
-BASE_IMAGE: rehive/bitcoin-hooks-base
-IMAGE: gcr.io/zapgo-1273/bitcoin-hooks
+IMAGE: zapgo/bitcoin-hooks
 CELERY_ID: bitcoin-kube-local
 VIRTUAL_HOST: bitcoinhooks.rehive.com
 VENV_PYTHON: ~/anaconda/envs/zapgo-core/bin/python3.5
