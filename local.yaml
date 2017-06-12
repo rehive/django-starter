@@ -1,5 +1,5 @@
 PROJECT_NAME: bitcoin-hooks
-HOST_NAME: build-server # not required for k8s-only setup
+HOST_NAME: bitcoin-hooks # not required for k8s-only setup
 NAMESPACE: bitcoin-hooks
 IMAGE: zapgo/bitcoin-hooks
 CELERY_ID: bitcoin-kube-local

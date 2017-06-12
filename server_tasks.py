@@ -1,10 +1,13 @@
 from invoke import task
-import fabfile as fab
-from fabric.tasks import execute
 import json
 import yaml
 import semver
 import dotenv
+
+from fabric.api import run, local
+from fabric.tasks import execute
+
+import fabfile as fab
 
 import os
 
@@ -37,11 +40,21 @@ def get_config(config):
 
 # Build Server Commands:
 @task
+def upload(ctx, config):
+    """Rsync project to server"""
+    execute(fab.set_env, config)
+    execute(fab.upload)
+
+@task
 def build(ctx, config, version_tag, packages=False):
     """
     Build project's docker image on remote server using fabric
     """
-    execute(fab.set_env, config)
-    execute(fab.upload)
-    execute(fab.build, config, version_tag)
+    upload(ctx, config)
+    execute(fab.set_env, config, version_tag)
+    execute(fab.build)
+
+@task
+def push(ctx, config, version_tag):
+    """Push image to container registry"""
     execute(fab.push, config, version_tag)

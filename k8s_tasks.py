@@ -1,6 +1,5 @@
 from invoke import task
 import fabfile as fab
-from fabric.tasks import execute
 import json
 import yaml
 import semver
@@ -75,18 +74,6 @@ def templater(ctx, config, template='etc/k8s/templates/all-in-one.yaml'):
         os.mkdir(output_dir)
         with open(output_path, 'w') as myfile:
             myfile.write(formatted)
-
-
-# Build Server Commands:
-@task
-def build(ctx, config, version_tag, packages=False):
-    """
-    Build project's docker image on remote server using fabric
-    """
-    execute(fab.set_env, config)
-    execute(fab.upload)
-    execute(fab.build, config, version_tag)
-    execute(fab.push, config, version_tag)
 
 
 @task

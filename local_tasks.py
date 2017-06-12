@@ -5,9 +5,6 @@ import semver
 import dotenv
 import os
 
-from fabric.api import run, local
-from fabric.tasks import execute
-
 
 def get_config(config):
     """Import config file as dictionary"""
@@ -62,4 +59,29 @@ def manage(ctx, cmd):
     venv_python = config_dict['VENV_PYTHON']
 
     # Switched to run via fabric as invoke was not displaying stdout correctly
-    execute(local, '{python} src/manage.py {cmd}'.format(python=venv_python, cmd=cmd))
+    ctx.run('{python} src/manage.py {cmd}'.format(python=venv_python, cmd=cmd), pty=True)
+
+@task
+def build(ctx, config, version_tag):
+    """
+    Build project's docker image
+    """
+    config_dict = get_config(config)
+    image_name = config_dict['IMAGE'].split(':')[0]
+    image = '{}:{}'.format(image_name, version_tag)
+
+    cmd = 'docker build -t %s .' % image
+    ctx.run(cmd, echo=True)
+    return image
+
+
+@task
+def push(ctx, config, version_tag):
+    """
+    Build, tag and push docker image
+    """
+    config_dict = get_config(config)
+    image_name = config_dict['IMAGE'].split(':')[0]
+    image = '{}:{}'.format(image_name, version_tag)
+
+    ctx.run('gcloud docker -- push %s' % image, echo=True)
