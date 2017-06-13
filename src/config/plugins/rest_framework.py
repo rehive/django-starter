@@ -18,18 +18,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ),
     'EXCEPTION_HANDLER': 'config.exceptions.custom_exception_handler',
-
-    'DEFAULT_THROTTLE_CLASSES': (
-        'config.throttling.UserHourRateThrottle',
-    ),
-    'DEFAULT_THROTTLE_RATES': {
-        'second_anon': '1/second',
-        'hour_anon': '30/hour',
-        'day_anon': '500/day',
-        'second_free': '3/second',
-        'hour_free': '200/hour',
-        'day_free': '2000/day',
-    }
 }
 
 from rest_framework.settings import reload_api_settings

@@ -21,7 +21,6 @@ env.host_name = os.environ.get('HOST_NAME', '')
 env.username = os.environ.get('SSH_USERNAME', 'ubuntu')
 env.sshd_port = os.environ.get('SSH_PORT', '22')
 env.docker_compose_version = os.environ.get('DOCKER_COMPOSE_VERSION', '1.5.2')
-env.pptp_secret = os.environ.get('PPTP_SECRET', 'replace_with_real_password')
 
 
 # How to create default deployment
@@ -50,7 +49,7 @@ def provision(provider='digitalocean'):
               '{host_name}'.format(host_name=env.host_name, user=env.username))
 
 
-def add():
+def ssh_config():
     ip_address = local(
         'docker-machine ip {host_name}'.format(host_name=env.host_name), capture=True)
     keyfile = '~/.docker/machine/machines/{host_name}/id_rsa'.format(
@@ -120,7 +119,7 @@ def factory():
         run('rm master.tar.gz')
 
 
-def nginx_ssl_setup():
+def nginx_letsencrypt():
     upload_project(os.path.join(
         env.local_dir, 'docker-services.yml'), '/srv/', use_sudo=True)
     run('docker-compose -f /srv/docker-services.yml up -d nginx-proxy letsencrypt-plugin')

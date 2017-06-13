@@ -6,4 +6,4 @@ CELERY_ID: bitcoin-kube-local
 VIRTUAL_HOST: bitcoinhooks.rehive.com
 VENV_PYTHON: ~/anaconda/envs/zapgo-core/bin/python3.5
 ENV_FILE: .local.env
-POSTGRES_1_PORT_5432_TCP_PORT: 5123
+POSTGRES_PORT: 5123

@@ -25,7 +25,6 @@ msgpack-python==0.4.7
 oauthlib==1.1.2
 phonenumbers==7.4.0
 Pillow==3.2.0
-psycopg2==2.6.2
 PyJWT==1.4.0
 pysha3==0.3
 PySocks==1.5.6
@@ -44,3 +43,4 @@ django-oauth-toolkit==0.11.0
 django-anymail[sendgrid]==0.8
 django-celery-email==1.1.5
 two1==3.10.4
+psycopg2==2.6.2
