@@ -16,7 +16,7 @@ If psycopg2 installation fails to install, try `conda install psycopg2==2.6.2`
 
 4. Use `.local.env.example` as a template to create a `.local.env` with the project environmental variables.
 
-5. To generate a key use `python -c "import string,random; uni=string.ascii_letters+string.digits+string.punctuation; print repr(''.join([random.SystemRandom().choice(uni) for i in range(random.randint(45,50))]))"`
+5. To generate a key use `python -c "import string,random; uni=string.ascii_letters+string.digits+string.punctuation; print(repr(''.join([random.SystemRandom().choice(uni) for i in range(random.randint(45,50))])))"`
 
 6. Start the postgres database:  
 `inv local.compose -c 'up -d postgres'`
