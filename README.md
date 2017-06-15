@@ -62,7 +62,7 @@ Manual deployment:
 4. Letsencrypt SSL setup:  
     `kubectl apply -f etc/k8s/lego/00-namespace.yaml && kubectl apply -f etc/k8s/lego/configmap.yaml && kubectl apply -f etc/k8s/lego/deployment.yaml`  
 5. Webserver setup:  
-    `inv templater production` (templater is not yet very smart. you will need to manually configure things like multiple domains)
+    `inv k8s.templater production` (templater is not yet very smart. you will need to manually configure things like multiple domains)
 	`inv setup production`  
 6. Check the external IP address and setup DNS:  
     `inv ip production`  
