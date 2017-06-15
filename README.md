@@ -54,15 +54,17 @@ Manual deployment:
 
 ### Once-off Kubernetes Cluster Setup:
 1. Create a Kubernetes Cluster
-2. Athenticate gcloud:    
+2. Install gcloud:    
     `gcloud auth login`  
-    `gcloud config set project {project-name}`  
-3. Connect to kubernetes cluster:  
+    `gcloud config set project {project-name}`
+3. Install Kubectl:
+    `gcloud components install kubectl`
+4. Connect to kubernetes cluster:  
     `gcloud container clusters get-credentials {cluster-name} --zone us-west1-a --project {project-name}`  
-4. Letsencrypt SSL setup:  
+5. Letsencrypt SSL setup:  
     `kubectl apply -f etc/k8s/lego/00-namespace.yaml && kubectl apply -f etc/k8s/lego/configmap.yaml && kubectl apply -f etc/k8s/lego/deployment.yaml`  
-5. Webserver setup:  
+6. Webserver setup:  
     `inv k8s.templater production` (templater is not yet very smart. you will need to manually configure things like multiple domains)
-	`inv setup production`  
-6. Check the external IP address and setup DNS:  
+	`inv k8s.setup production`  
+7. Check the external IP address and setup DNS:  
     `inv ip production`  
