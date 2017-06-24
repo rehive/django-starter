@@ -17,7 +17,6 @@ from .plugins.secrets import *
 from .plugins.rest_framework import *
 from .plugins.database import *
 from .plugins.tasks import *
-from .plugins.authentication import *
 from .plugins.s3utils import *
 from .plugins.email import *
 from .plugins.sentry import *
@@ -53,7 +52,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'storages',
 
-    'bitcoin_monitoring',
+    'starter',
 
     'anymail',
     'djcelery_email',
@@ -114,7 +113,7 @@ LANGUAGES = [
 
 LANGUAGE_CODE = 'en'
 
-TIME_ZONE = 'Africa/Johannesburg'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -183,19 +182,3 @@ SITE_HEADER = 'Rehive'
 CACHE_DIR = os.path.join(PROJECT_DIR, 'var/cache')
 
 FORMAT_MODULE_PATH = 'config.formats'
-
-
-# Email config
-# ---------------------------------------------------------------------------------------------------------------------
-
-if os.environ.get('ENV_FILE', '') == '.local.env':
-    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
-SERVER_EMAIL = 'Rehive Server <info@rehive.com>'
-DEFAULT_FROM_EMAIL = 'Rehive <info@rehive.com>'
-
-ADMINS = [('Michail', 'michail@rehive.com'),
-          ('Helghardt', 'helghardt@rehive.com'),
-          ('Joshua', 'joshua@rehive.com'),
-          ('Johan', 'johan@rehive.com')]
-

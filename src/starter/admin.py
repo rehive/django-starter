@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from bitcoin_monitoring.models import Transaction, Webhook
+from starter.models import Message
 
 
 class CustomModelAdmin(admin.ModelAdmin):
@@ -9,12 +9,12 @@ class CustomModelAdmin(admin.ModelAdmin):
         super(CustomModelAdmin, self).__init__(model, admin_site)
 
 
-class TransactionAdmin(CustomModelAdmin):
+class MessageAdmin(CustomModelAdmin):
     pass
 
 
 class WebhookAdmin(CustomModelAdmin):
     pass
 
-admin.site.register(Transaction, TransactionAdmin)
-admin.site.register(Webhook, WebhookAdmin)
+admin.site.register(Message, MessageAdmin)
+

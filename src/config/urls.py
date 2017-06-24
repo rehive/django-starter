@@ -12,7 +12,7 @@ admin.autodiscover()
 
 urlpatterns = (
     # Views
-    url(r'^', include('bitcoin_monitoring.urls', namespace='bitcoin-monitoring')),
+    url(r'^', include('starter.urls', namespace='starter')),
 )
 
 # Add debug URL routes

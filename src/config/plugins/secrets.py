@@ -31,8 +31,4 @@ if not env_vars_loaded:
 DEBUG = os.environ.get('DEBUG', '') in ['True', True, 'true']
 
 # secrets
-SECRET_KEY = os.environ.get('DJANGO_SECRET', '13&wd9&48$jv82^b#ygwu#fm+8l8orx2s5dh(90o3meuevngh!')
-
-# AWS
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', '')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', '')
+SECRET_KEY = os.environ.get('DJANGO_SECRET')

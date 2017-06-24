@@ -8,7 +8,7 @@ class NotImplementedAPIError(APIException):
     default_detail = 'Functionality not implemented.'
 
 
-class AdapterError(Exception):
+class StarterError(Exception):
     status_code = status.HTTP_500_INTERNAL_SERVER_ERROR
     default_detail = 'A server error occurred.'
     default_error_slug = 'internal_error'
@@ -24,7 +24,3 @@ class AdapterError(Exception):
     def __str__(self):
         return self.detail
 
-
-class WebhookFailedError(AdapterError):
-    default_detail = 'Webhook post failed.'
-    default_error_slug = 'webhook_failed_error.'

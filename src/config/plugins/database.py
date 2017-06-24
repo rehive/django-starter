@@ -4,6 +4,8 @@ if os.environ.get('POSTGRES_PORT'):
     POSTGRES_PORT = os.environ.get('POSTGRES_PORT')
 elif os.environ.get('DATABASE_PGPOOL_SERVICE_PORT_5432_TCP_PORT'):
     POSTGRES_PORT = os.environ.get('DATABASE_PGPOOL_SERVICE_PORT_5432_TCP_PORT')
+elif os.environ.get('DATABASE_POSTGRES_SERVICE_PORT_5432_TCP_PORT'):
+    POSTGRES_PORT = os.environ.get('DATABASE_POSTGRES_SERVICE_PORT_5432_TCP_PORT')
 elif os.environ.get('POSTGRES_1_PORT_5432_TCP_PORT'):
     POSTGRES_PORT = os.environ.get('POSTGRES_1_PORT_5432_TCP_PORT')
 else:
@@ -11,8 +13,10 @@ else:
 
 if os.environ.get('POSTGRES_HOST'):
     POSTGRES_HOST = os.environ.get('POSTGRES_HOST')
-elif os.environ.get('DATABASE_PGPOOL_SERVICE_5432_HOST'):
-    POSTGRES_HOST = os.environ.get('DATABASE_PGPOOL_SERVICE_5432_HOST')
+elif os.environ.get('DATABASE_PGPOOL_SERVICE_SERVICE_HOST'):
+    POSTGRES_HOST = os.environ.get('DATABASE_PGPOOL_SERVICE_SERVICE_HOST')
+elif os.environ.get('DATABASE_POSTGRES_SERVICE_SERVICE_HOST'):
+    POSTGRES_HOST = os.environ.get('DATABASE_POSTGRES_SERVICE_SERVICE_HOST')
 elif os.environ.get('POSTGRES_PORT_5432_TCP_ADDR'):
     POSTGRES_HOST = os.environ.get('POSTGRES_PORT_5432_TCP_ADDR')
 else:
@@ -27,7 +31,7 @@ DATABASES = {
         'HOST': POSTGRES_HOST,
         'PORT': POSTGRES_PORT,
         'OPTIONS': {
-            'connect_timeout': 3,
+            'connect_timeout': 10,
         }
     }
 }

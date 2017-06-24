@@ -1,9 +1,9 @@
-PROJECT_NAME: bitcoin-hooks
-HOST_NAME: bitcoin-hooks # not required for k8s-only setup
-NAMESPACE: bitcoin-hooks
-IMAGE: zapgo/bitcoin-hooks
-CELERY_ID: bitcoin-kube-local
-VIRTUAL_HOST: bitcoinhooks.rehive.com
+PROJECT_NAME: django-starter
+HOST_NAME: django-starter # not required for k8s-only setup
+NAMESPACE: django-starter
+IMAGE: rehive/django-starter
+CELERY_ID: django-starter
+VIRTUAL_HOST: starter.rehive.com
 VENV_PYTHON: ~/anaconda/envs/zapgo-core/bin/python3.5
 ENV_FILE: .local.env
-POSTGRES_PORT: 5123
+POSTGRES_PORT: 5125

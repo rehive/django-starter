@@ -41,6 +41,4 @@ twilio==5.4.0
 factory_boy==2.8.1
 django-oauth-toolkit==0.11.0
 django-anymail[sendgrid]==0.8
-django-celery-email==1.1.5
-two1==3.10.4
 psycopg2==2.6.2

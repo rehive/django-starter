@@ -4,7 +4,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from . import views
 
 urlpatterns = (
-    url(r'^webhooks/$', views.WebhookView.as_view(), name='webhooks'),
+    url(r'^messages/$', views.MessageView.as_view(), name='messages'),
 )
 
 urlpatterns = format_suffix_patterns(urlpatterns)
