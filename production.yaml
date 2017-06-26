@@ -1,8 +1,10 @@
-PROJECT_NAME: bitcoin-hooks
-NAMESPACE: bitcoin-hooks
-IMAGE: gcr.io/zapgo-1273/bitcoin-hooks
-BASE_IMAGE: rehive/bitcoin-hooks-base
-VIRTUAL_HOST: bitcoinhooks.rehive.com
-CELERY_ID: bitcoin-kube
+PROJECT_NAME: django-starter
+NAMESPACE: django-starter
+IMAGE: rehive/django-starter
+HOST_NAME: escrow
+BASE_IMAGE: rehive/django-starter
+VIRTUAL_HOST: escrow.rehive.io
 ENV_FILE: .production.env
-VENV_PYTHON: ~/anaconda/envs/zapgo-core/bin/python3.5
+CELERY_ID: django-starter
+GCLOUD_STATIC_BUCKET: escrow
+POSTGRES_PORT: 5125

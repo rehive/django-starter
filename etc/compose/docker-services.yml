@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
   webapp:
-    image: ${IMAGE_NAME}
+    image: ${IMAGE_NAME}:${VERSION}
     user: nobody
     env_file: ${ENV_FILE}
     logging:

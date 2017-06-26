@@ -29,3 +29,33 @@ If psycopg2 installation fails to install, try `conda install psycopg2==2.6.2`
 
 9. Start the webserver on port 8000:  
 `inv local.manage 'runserver --insecure'`
+
+Provisioning virtual machine on cloud provider (Optional)
+---------------------------------------------------------
+
+1. `cd etc/server`
+
+2. Create your own `.server.env` by copying `.server.env.example`
+
+3. Set your 'HOST NAME' to describe your server. For Google Cloud use `USERNAME:ubuntu`  for Digital Ocean use `USERNAME:root`. Furthermore, for Digital Ocean add your token, whereas for Google Cloud you have to install Google Cloud SDK.
+
+4. Make sure `fabric3` is installed in your Python virtual environment. Activate your Python virtual environment, e.g. `source activate django-starter`.
+
+5. Edit the provision function in fabfile.py:
+- For Google Cloud set your project name and machine settings. 
+- For Digital Ocean set your machine settings.
+
+6. Run `fab provision:gcloud`
+
+7. Run `fab ssh_config`
+
+8. Run `fab install`
+
+9. Run `fab nginx_letsencrypt`
+
+Deploy to virtual machine on cloud provider (Optional)
+------------------------------------------------------
+
+1. Provision your cloud server. Follow the steps above or look at the code in fabfile.py if you want to do it yourself.
+
+2. 

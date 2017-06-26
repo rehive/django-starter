@@ -40,9 +40,9 @@ def provision(provider='digitalocean'):
     elif provider == 'gcloud':
         local('docker-machine create '
               '--driver google '
-              '--google-project zapgo-1273 '
+              '--google-project play-server '
               '--google-zone europe-west1-c '
-              '--google-machine-type n1-standard-1 '
+              '--google-machine-type g1-small '
               '--google-disk-size 20 '
               '--google-disk-type pd-standard '
               '--google-username {user} '
@@ -80,7 +80,7 @@ env.ssh_config_template = """Host {host_name}
 """
 
 
-def install(gcloud=True):
+def install():
     # Add user to sudo:
     sudo('adduser {user} sudo'.format(user=env.username))
 
@@ -99,25 +99,6 @@ def install(gcloud=True):
     # Create server directory structure:
     sudo("mkdir -p /srv/certs /srv/config /srv/apps/default /srv/htdocs /srv/build")
     sudo("chown -R %s:%s /srv/" % (env.username, env.username))
-
-
-def gcloud():
-    sudo('export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"')
-    run('echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list')
-    run('curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -')
-    run('sudo apt-get update && sudo apt-get install google-cloud-sdk')
-
-
-def factory():
-    run('docker pull zapgo/wheel-factory')
-
-    with cd('/srv/build/'):
-        fp = 'docker-image-factory-master'
-        run('wget https://github.com/zapgo/docker-image-factory/archive/master.tar.gz')
-        run('tar -zxvf master.tar.gz '
-            '--strip=1'.format(fp=fp))
-        run('rm master.tar.gz')
-
 
 def nginx_letsencrypt():
     upload_project(os.path.join(

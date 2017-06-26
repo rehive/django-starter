@@ -27,6 +27,11 @@ def set_env(config, version_tag=None):
     env.base_image_name = env.image_name + '_base'
     env.version_tag = version_tag
 
+    env.env_file = config_dict['ENV_FILE']
+    env.celery_id = config_dict['CELERY_ID']
+    env.compose_project_name = config_dict['PROJECT_NAME']
+    env.postgres_port = config_dict['POSTGRES_PORT']
+
     env.build_dir = '/srv/build'
     env.local_path = os.path.dirname(__file__)
 
@@ -79,12 +84,30 @@ def docker(cmd='--help'):
     run(template)
 
 
-def compose(cmd='--help', path=''):
+def compose(cmd='--help', version='latest'):
     """
     Wrapper for docker-compose
     """
-    with cd(path):
-        run('docker-compose {cmd}'.format(cmd=cmd))
+
+    env_file = os.path.join(env.project_dir, env.env_file)
+
+    env_vars = ("IMAGE_NAME={image_name} "
+                "VERSION={version} "
+                "ENV_FILE={env_file} "
+                "CELERY_ID={celery_id}  "
+                "COMPOSE_PROJECT_NAME={compose_project_name} "
+                "POSTGRES_PORT={postgres_port} "
+                ).format(image_name=env.image_name,
+                         env_file=env_file,
+                         celery_id=env.celery_id,
+                         compose_project_name=env.compose_project_name,
+                         postgres_port=env.postgres_port,
+                         version=version)
+
+    path = 'etc/compose/docker-compose.yml'
+
+    with cd(env.project_dir):
+        run('{env} docker-compose -f {path} {cmd}'.format(env=env_vars, cmd=cmd, path=path))
 
 # App Image Builder:
 def gcloud_login():

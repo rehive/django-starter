@@ -57,4 +57,11 @@ def build(ctx, config, version_tag, packages=False):
 @task
 def push(ctx, config, version_tag):
     """Push image to container registry"""
-    execute(fab.push, config, version_tag)
+    execute(fab.set_env, config, version_tag)
+    execute(fab.push)
+
+@task
+def compose(ctx, cmd, config, version_tag):
+    """Push image to container registry"""
+    execute(fab.set_env, config, version_tag)
+    execute(fab.compose, cmd, version_tag)

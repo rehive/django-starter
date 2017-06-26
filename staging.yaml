@@ -1,8 +1,0 @@
-PROJECT_NAME: bitcoin-hooks
-NAMESPACE: bitcoin-hooks-staging
-IMAGE: zapgo/bitcoin-hooks
-HOST_NAME: build-server # not required for k8s-only setup
-BASE_IMAGE: rehive/bitcoin-hooks-base
-VIRTUAL_HOST: staging.bitcoinhooks.rehive.com
-ENV_FILE: .production.env
-CELERY_ID: bitcoin-kube-staging
