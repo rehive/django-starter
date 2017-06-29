@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'starter',
 
     'anymail',
-    'djcelery_email',
     'raven.contrib.django.raven_compat',  # sentry
     'debug_toolbar',
 ]
@@ -176,8 +175,6 @@ VERSION = '1.0.0'
 SITE_ID = 1
 
 FIXTURE_DIRS = ['config/fixtures']
-
-SITE_HEADER = 'Rehive'
 
 CACHE_DIR = os.path.join(PROJECT_DIR, 'var/cache')
 
