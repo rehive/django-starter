@@ -10,8 +10,10 @@ services:
       - postgres
     ports:
       - 8010:8000
+    network_mode: bridge
 
   worker:
+    network_mode: bridge
     extends:
         service: webapp
         file: ./docker-services.yml
@@ -19,20 +21,13 @@ services:
     links:
       - postgres
 
-  scheduler:
-    extends:
-      service: webapp
-      file: ./docker-services.yml
-    command: /bin/sh -c "celery -A config.celery worker --beat --loglevel=INFO --pidfile= --concurrency=1 -Q dummy-queue-{CELERY_ID}"
-
   postgres:
     image: postgres:9.5
+    network_mode: bridge
     volumes_from:
       - db_data
     ports:
       - '${POSTGRES_PORT}:5432'
-    env_file:
-    - ${ENV_FILE}
     restart: always
 
   db_data:

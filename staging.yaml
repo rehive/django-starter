@@ -1,8 +1,8 @@
 PROJECT_NAME: django-starter
+HOST_NAME: build-server
 NAMESPACE: django-starter
 IMAGE: rehive/django-starter
 CELERY_ID: django-starter
 VIRTUAL_HOST: starter.rehive.com
-VENV_PYTHON: ~/anaconda/envs/starter/bin/python
-ENV_FILE: .local.env
+ENV_FILE: .staging.env
 POSTGRES_PORT: 5125

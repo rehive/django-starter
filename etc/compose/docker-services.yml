@@ -5,6 +5,7 @@ services:
     image: ${IMAGE_NAME}:${VERSION}
     user: nobody
     env_file: ${ENV_FILE}
+    network_mode: "bridge"
     logging:
       driver: "json-file"
       options:

@@ -58,4 +58,4 @@ Deploy to virtual machine on cloud provider (Optional)
 
 1. Provision your cloud server. Follow the steps above or look at the code in fabfile.py if you want to do it yourself.
 
-2. 
+2. Create .production.yaml and .production.env using .production.yaml.example and production.env.example as reference.

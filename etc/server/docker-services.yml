@@ -1,22 +1,27 @@
-nginx-proxy:
-  image: jwilder/nginx-proxy:0.1.0
-  ports:
-    - 80:80
-    - 443:443
-  volumes:
-    - /srv/htdocs:/var/www:ro
-    - /srv/certs:/etc/nginx/certs:ro
-    - /srv/config/:/etc/nginx/vhost.d:ro
-    - /var/run/docker.sock:/tmp/docker.sock:ro
-    - /usr/share/nginx/html
-  restart: always
+version: "2.1"
 
-letsencrypt-plugin:
-  image: jrcs/letsencrypt-nginx-proxy-companion
-  volumes_from:
-    - nginx-proxy
-  volumes:
-    - /srv/config:/etc/nginx/vhost.d:rw
-    - /srv/certs:/etc/nginx/certs:rw
-    - /var/run/docker.sock:/var/run/docker.sock:ro
-  restart: always
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - nginx-volume:/etc/nginx/vhost.d
+      - nginx-volume:/usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - nginx-volume:/etc/nginx/certs
+    network_mode: "bridge"
+    restart: always
+
+  letsencrypt-plugin:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    volumes_from:
+      - "nginx-proxy"
+    network_mode: "bridge"
+    restart: always
+
+volumes:
+  nginx-volume:
