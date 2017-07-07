@@ -57,13 +57,15 @@ Provisioning virtual machine on cloud provider (Optional)
 Deploy to virtual machine on cloud provider (Optional)
 ------------------------------------------------------
 
-1. Provision your cloud server. Follow the steps above or look at the code in fabfile.py if you want to do it yourself.
+1. Provision your cloud server. Follow the steps above or look at the code in fabfile.py if you want to do it yourself.  
 
-2. Create .production.yaml and .production.env using .production.yaml.example and production.env.example as reference. The HOST_NAME variable should be the same as that set up for your provisioned machine in ~/.ssh/config, as was done in the steps above.
+2. Create .production.yaml and .production.env using .production.yaml.example and production.env.example as reference. The HOST_NAME variable should be the same as that set up for your provisioned machine in ~/.ssh/config, as was done in the steps above.  
 
-3. Build your docker image on the server (the last parameter is the version numnber):
-   `inv server.build staging 0.0.1`
-   `inv server.push staging 0.0.1`
+3. Set the VIRTUAL_HOST and LETSENCRYPT_HOST parameters to your domain name and then go to your domain's DNS settings and point it to the IP address of your virtual machine. The nginx-proxy and letsencrypt-plugin docker containers should then take care of the rest when you deploy and automatically generate and configure SSL certificates.  
+
+4. Build your docker image on the server (the last parameter is the version numnber):  
+   `inv server.build staging 0.0.1`  
+   `inv server.push staging 0.0.1`  
    
-4. Run your server:
-    `inv compose up staging 0.0.1`
+5. Run your server:  
+    `inv compose up staging 0.0.1`  
