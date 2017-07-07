@@ -54,8 +54,8 @@ Provisioning virtual machine on cloud provider (Optional)
 9. Run `fab nginx_letsencrypt`
 
 
-Deploy to virtual machine on cloud provider (Optional)
-------------------------------------------------------
+Deploy to virtual machine on cloud provider
+--------------------------------------------
 
 1. Provision your cloud server. Follow the steps above or look at the code in fabfile.py if you want to do it yourself.  
 
