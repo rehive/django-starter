@@ -61,7 +61,7 @@ Deploy to virtual machine on cloud provider (Optional)
 
 2. Create .production.yaml and .production.env using .production.yaml.example and production.env.example as reference. The HOST_NAME variable should be the same as that set up for your provisioned machine in ~/.ssh/config, as was done in the steps above.  
 
-3. Set the VIRTUAL_HOST and LETSENCRYPT_HOST parameters to your domain name and then go to your domain's DNS settings and point it to the IP address of your virtual machine. The nginx-proxy and letsencrypt-plugin docker containers should then take care of the rest when you deploy and automatically generate and configure SSL certificates.  
+3. Set the VIRTUAL_HOST and LETSENCRYPT_HOST parameters to your domain name and then go to your domain's DNS settings and create an A record pointing to the IP address of your virtual machine. The nginx-proxy and letsencrypt-plugin docker containers should then take care of the rest when you deploy and automatically generate and configure SSL certificates.  
 
 4. Build your docker image on the server (the last parameter is the version numnber):  
    `inv server.build staging 0.0.1`  
