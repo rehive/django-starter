@@ -1,0 +1,10 @@
+project_name: django-starter
+docker_image: gcr.io/rehive-hackathons/django-starter
+helm_chart: gcr.io/rehive-hackathons/django-starter
+configs:
+    dev:
+      project: rehive-hackathons
+      cluster: hackathon
+      namespace: django-starter
+      helm_values_path: ./etc/helm/dev/values.yaml
+      env_dir: ./etc/helm/dev/

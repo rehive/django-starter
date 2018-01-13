@@ -1,8 +1,0 @@
-PROJECT_NAME: django-starter
-HOST_NAME: build-server
-NAMESPACE: django-starter
-IMAGE: rehive/django-starter
-CELERY_ID: django-starter
-VIRTUAL_HOST: starter.rehive.com
-ENV_FILE: .staging.env
-POSTGRES_PORT: 5125

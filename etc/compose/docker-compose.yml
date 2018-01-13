@@ -17,7 +17,7 @@ services:
     extends:
         service: webapp
         file: ./docker-services.yml
-    command: /bin/sh -c "celery -A config.celery worker --loglevel=INFO --concurrency=4 -Q general-${CELERY_ID}"
+    command: /bin/sh -c "celery -A config.celery worker --loglevel=INFO --concurrency=4 -Q general"
     links:
       - postgres
 

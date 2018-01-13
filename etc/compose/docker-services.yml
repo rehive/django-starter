@@ -4,7 +4,7 @@ services:
   webapp:
     image: ${IMAGE_NAME}:${VERSION}
     user: nobody
-    env_file: ${ENV_FILE}
+    env_file: $PWD/.env
     network_mode: "bridge"
     logging:
       driver: "json-file"
