@@ -1,6 +1,6 @@
 anyjson==0.3.3
 boto==2.40.0
-celery==3.1.23
+celery==5.2.2
 Django==1.9.7
 django-cors-headers==1.1.0
 django-debug-toolbar==1.7
